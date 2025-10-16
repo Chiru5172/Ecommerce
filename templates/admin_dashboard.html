@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5">
+  <h2 class="fw-bold mb-4">Admin Dashboard 👑</h2>
+  <div class="row g-4 text-center">
+    <div class="col-md-4">
+      <div class="card p-3 shadow-sm bg-light hover-scale">
+        <h4>Total Users</h4>
+        <p class="fs-3 fw-bold text-primary">{{ users_count }}</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card p-3 shadow-sm bg-light hover-scale">
+        <h4>Total Products</h4>
+        <p class="fs-3 fw-bold text-success">{{ products_count }}</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card p-3 shadow-sm bg-light hover-scale">
+        <h4>Total Orders</h4>
+        <p class="fs-3 fw-bold text-danger">{{ orders_count }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="mt-4 text-center">
+    <a href="/admin/orders" class="btn btn-primary me-2">Manage Orders</a>
+    <a href="/admin/users" class="btn btn-secondary me-2">View Users</a>
+    <a href="/products" class="btn btn-success">Manage Products</a>
+  </div>
+</div>
+{% endblock %}
