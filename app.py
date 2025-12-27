@@ -5,6 +5,7 @@ from routes.auth_routes import auth_bp, login_manager
 from routes.product_routes import product_bp
 from routes.cart_routes import cart_bp  # 👈 NEW
 from routes.user_routes import user_bp
+from routes.admin_routes import admin_bp 
 
 # Initialize login manager
 login_manager.init_app(app)
@@ -14,6 +15,7 @@ app.register_blueprint(auth_bp)
 app.register_blueprint(product_bp)
 app.register_blueprint(cart_bp)
 app.register_blueprint(user_bp) 
+app.register_blueprint(admin_bp)
 
 @app.route('/')
 def home():
